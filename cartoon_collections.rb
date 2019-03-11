@@ -13,12 +13,18 @@ def long_planeteer_calls(array)
 end
 
 def find_the_cheese(array)
-  x = ""
   cheese_types = ["cheddar", "gouda", "camembert"]
+  cheese_types.find do |cheese|
+    array.include?(cheese)
+  end
+
+=begin
+  x = ""
   cheese_types.any? do |cheese|
   	if array.include?(cheese)
   		x << cheese
   	end
   end
   x == "" ? nil : x
+=end
 end
